@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source 
-      - uses: actions/checkout@v4
-      - name: Buiild images
+        uses: actions/checkout@v4
+      - name: Build images
         run: |
           cd Part7a
           docker build -t ${{ secrets.DOCKER_USERNAME }}/al-app:lastest ./app
